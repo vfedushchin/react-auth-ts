@@ -1,0 +1,24 @@
+@import 'src/static/assets/styles/resources';
+
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  user-select: none;
+
+
+  &__container {
+    height: 52px;
+    flex: 1;
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin: 20px 10px;
+  }
+
+}

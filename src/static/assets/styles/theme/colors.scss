@@ -1,0 +1,98 @@
+$primary_color: #316FEA;
+$primary_color_lighter: #fff6d4;
+$primary_color_disabled: #43295d;
+$secondary_color: #39413e;
+$secondary_color_lighter: #ffa105;
+$third_color: #2dbbff;
+
+$bg_color: #fff;
+$bg_footer: #eee;
+$bg_plane: #262a29;
+$bg_info: #493e28;
+$bg_error: #fa9593;
+$bg_success: #335835;
+$bg_plane_hover: #444444;
+$bg_plane2: #39413e;
+$bg_plane3: #2f2f2f;
+$bg_disabled: rgba(255, 255, 255, 0.1);
+$bg_disabled_hover: rgba(255, 255, 255, 0.2);
+$bg_disabled_dark: rgba(255, 255, 255, 0.03);
+$bg_video: #282828;
+
+$status_process: #ffdf6f;
+$status_error: #fb3838;
+$status_success: #47b044;
+
+$text_color: rgba(26, 25, 25, 1);
+$text_color_light: #A1ABB5;
+$title_color: #000;
+
+$menu_color: #b0b0b0;
+$text_gray: #BEC5CC;
+$text_gray2: #b1b1b1;
+$text_gray3: #b3b3b3;
+$text_gray4: #393939;
+$dark_color: #1d1d1d;
+
+$dark: #000;
+$light: #fff;
+$error: #fb3838;
+$error_bg: #eee;
+$red: #fb3838;
+$red2: #ff5a5a;
+$red3: #ff0000;
+$green: #4bd048;
+$green2: #00df4c;
+
+$link_color: $primary_color;
+$link_hover_color: darken($primary_color, 30);
+
+$footer_text_color: $secondary_color;
+$footer_link_color: $secondary_color;
+
+$button_color: $primary_color;
+
+$button_secondary_color: #39413e;
+$button_secondary_hover_color: #575d5b;
+
+$button_alternative_color: rgba(#29312e, 0.1);
+
+
+$button_color_primary: #fff;
+$button_border_color: $light;
+
+$error_color: #e1081e;
+
+$light_color: #fff;
+$gray_color: #e5e5e5;
+$gray_color2: #e4e7ef;
+
+$border_color: #D3D8DC;
+$border_color2: #606060;
+$border_color3: #4e4e4e;
+$border_color4: #5e5e5e;
+
+$radius: 8px;
+$radius-medium: 6px;
+$radius-small: 4px;
+$radius-xs: 4px;
+$radius-xxs: 2px;
+$radius-big: 24px;
+
+$neutrals1: #141416;
+$neutrals2: #23262f;
+$neutrals3: #353945;
+$neutrals4: #777e90;
+$neutrals5: #b1b5c3;
+$neutrals6: #e6e8ec;
+$neutrals7: #f4f5f6;
+$neutrals8: #fcfcfd;
+
+/*------ Colors for rarity -----*/
+$common: #b1b7b7;
+$rare: #65acdd;
+$epic: #972fff;
+$legendary: #ff9a05;
+
+$plane_shadow: 0 26px 80px rgba($dark, 0.5);
+$plane_shadow2: 0 26px 80px rgba($dark, 0.25);

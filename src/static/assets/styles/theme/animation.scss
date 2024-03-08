@@ -1,0 +1,61 @@
+.rotate-animation {
+  animation: rotate-animation 3s ease-in-out infinite both;
+}
+
+.blink-animation {
+  animation: blink-animation 2s ease-in-out infinite both;
+}
+
+.animation-delay1 {
+  animation-delay: 1s;
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-animation
+ * ----------------------------------------
+ */
+@keyframes rotate-animation {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+    transform-origin: 50% 50%;
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+
+.show-block-animation {
+  animation: showBlock 0.4s forwards;
+}
+
+.hide-block-animation {
+  animation: hideBlock 0.3s forwards;
+}
+
+@keyframes showBlock {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hideBlock {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../resources';
+
+.btn {
+}
+
+.btn-inline {
+  background: none;
+  color: $primary_color;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $text_color;
+  }
+}

@@ -1,0 +1,24 @@
+@import 'src/static/assets/styles/resources';
+
+.forgot {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    margin: 22px 0 30px;
+  }
+
+  button + button {
+    margin-top: 20px;
+  }
+
+
+}

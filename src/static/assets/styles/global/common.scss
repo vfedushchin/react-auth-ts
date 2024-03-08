@@ -1,0 +1,67 @@
+@import '../resources';
+
+/*Remove outline for Slick carousel*/
+.slick-slide > div,
+.slick-slide > div > div,
+.hcsel__slide,
+.csel__slide {
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+
+  li {
+    margin: 5px 0;
+  }
+}
+
+hr {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: $border_color;
+}
+
+.showOnlyMobile {
+  @media (min-width: $tb_bp) {
+    display: none;
+  }
+}
+
+.mobileHide {
+  display: none;
+
+  @media (min-width: $sp_bp) {
+    display: inline-block;
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+
