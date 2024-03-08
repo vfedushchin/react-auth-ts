@@ -1,0 +1,47 @@
+@import 'src/static/assets/styles/resources';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 24px;
+  background: $button_color;
+  border-radius: $radius;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $light;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    background: darken($button_color, 10);
+  }
+
+  &_disabled {
+    opacity: 0.4;
+
+    &:hover {
+      background: $button_color;
+    }
+  }
+
+  &_secondary {
+    background: $button_secondary_color;
+
+    &:hover {
+      background: $button_secondary_hover_color;
+    }
+  }
+
+  &_alternative {
+    color: $text_color;
+    border: 1px solid $border_color;
+    background: $light;
+
+    &:hover {
+      background: darken($light, 3);
+      border-color: $text_color;
+    }
+  }
+}

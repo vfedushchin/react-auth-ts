@@ -1,0 +1,118 @@
+@import 'vendor/normalize';
+@import 'resources';
+@import 'global/buttons';
+@import 'global/common';
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: 'Inter';
+  font-size: $sp_base_font_size;
+  line-height: 1.2;
+  font-weight: 500;
+  color: $text_color;
+  background: $bg_color;
+  width: 100%;
+
+  @media (min-width: $tb_bp) {
+    font-size: $tb_base_font_size;
+    line-height: $tb_base_line_height;
+    overflow: auto;
+  }
+  @media (min-width: $dt_bp) {
+    font-size: $dt_base_font_size;
+    line-height: $dt_base_line_height;
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+#__next,
+html {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link_hover_color;
+    text-decoration: underline;
+  }
+}
+
+a,
+button {
+  outline: none;
+}
+
+a,
+p,
+li,
+td {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px;
+  color: $title_color;
+  letter-spacing: -0.5px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.22;
+  font-weight: 700;
+
+  @media (min-width: $tb_bp) {
+    font-size: 34px;
+  }
+
+  @media (min-width: $dt_bp) {
+    font-size: 36px;
+  }
+}
+
+h2,
+h3,
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h5,
+h6 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.align-center {
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}

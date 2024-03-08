@@ -1,0 +1,74 @@
+@import 'src/static/assets/styles/resources';
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    margin: 22px 0 30px;
+  }
+
+  &__options {
+    margin-top: 31px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    button {
+      flex: 1;
+      min-width: 150px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__separator {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 24px 0 10px;
+    text-transform: uppercase;
+
+    &::after {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 50%;
+      margin-top: 2px;
+        z-index: -1;
+        background: $border_color;
+    }
+
+    span {
+      position: relative;
+      padding: 5px;
+      font-size: 12px;
+      color: $text_gray;
+      background: $light;
+    }
+  }
+
+  &__form {
+    font-size: 14px;
+
+    &_forgot {
+      margin: -10px 0 30px;
+      width: 100%;
+      text-align: right;
+    }
+  }
+}

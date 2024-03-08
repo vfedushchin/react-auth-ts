@@ -1,0 +1,95 @@
+@import 'src/static/assets/styles/resources';
+
+.field {
+  position: relative;
+  margin: 24px 0;
+  text-align: left;
+
+  &.field_error {
+    .field__input {
+      color: $error;
+      border-color: $error;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $text_color;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+
+    &.pass_show {
+      &:before {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 1px;
+        height: 20px;
+        transform: rotate(45deg);
+        left: 10px;
+        top: 0;
+        background: rgba($text_color, .5);
+      }
+    }
+
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    padding: 8px 34px 8px 14px;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: $radius-medium;
+    border: 1px solid $border_color;
+    background: $light;
+    color: $text_color;
+    transition: border-color 0.4s;
+    max-width: 100%;
+
+    &::placeholder {
+      color: $text_color_light;
+    }
+
+    &:not([disabled]):hover {
+      border-color: rgba($dark, 0.4);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      color: rgba($text_color, 0.2);
+      opacity: 0.7;
+    }
+
+    &:not(:disabled):focus-visible,
+    &:not(:disabled):focus {
+      outline: none;
+      border-color: $primary_color;
+    }
+  }
+
+  &__error {
+    left: 0;
+    top: 100%;
+    position: relative;
+    z-index: 2;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    display: inline-block;
+    color: $light;
+    padding: 5px 10px;
+    border-radius: $radius-small;
+    background:$error;
+  }
+}

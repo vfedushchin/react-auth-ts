@@ -1,0 +1,62 @@
+@import 'src/static/assets/styles/resources';
+
+.ant-notification {
+  margin-inline-end: 20px;
+}
+
+.ant-notification-notice .ant-notification-notice,
+.ant-notification-notice {
+  font-size: 16px;
+  color: $light;
+  padding: 16px 24px;
+  background: $bg_info;
+  border-radius: $radius;
+  top: -15px;
+
+  @media (min-width: $tb_bp) {
+    top: 0;
+  }
+
+  &.error {
+    background: $bg_error;
+  }
+
+  &.success {
+    background: $bg_success;
+  }
+
+  &-content {
+    padding-right: 25px;
+  }
+
+  &-with-icon &-message,
+  &-message {
+    font-size: 16px;
+    color: rgba($light, 0.6);
+    margin-bottom: 0;
+  }
+
+  &-message,
+  &-description {
+    padding-right: 0;
+  }
+
+  &-icon {
+    margin-top: 1px;
+  }
+
+  &-close {
+    width: 24px;
+    height: 24px;
+    top: 25px !important;
+    border-radius: 50% !important;
+    color: $light;
+    background-color: lighten($text_color, 15);
+
+    &:hover {
+      border-radius: 50%;
+      color: $light;
+      background-color: darken($text_color, 50) !important;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import '../resources';
+
+/*-------Styles for icon font--------*/
+
+.icon_font:before {
+  @include set-icon-font();
+}
+
+.icon_heart:before {
+  content: '\e800';
+} /* '' */
+.icon_heart_empty:before {
+  content: '\e801';
+} /* '' */
+.icon_left:before {
+  content: '\e802';
+} /* '' */
+.icon_right:before {
+  content: '\e803';
+} /* '' */
+.icon_down:before {
+  content: '\e804';
+} /* '' */
+.icon_up:before {
+  content: '\e805';
+} /* '' */
+.icon_search:before {
+  content: '\e806';
+} /* '' */
+.icon_export:before {
+  content: '\e807';
+} /* '' */
+.icon_star:before {
+  content: '\e808';
+} /* '' */
+.icon_star_empty:before {
+  content: '\e809';
+} /* '' */
+.icon_plus:before {
+  content: '\e80a';
+} /* '' */
+.icon_minus:before {
+  content: '\e80b';
+} /* '' */
+.icon_cancel:before {
+  content: '\e80c';
+} /* '' */
+.icon_down_open:before {
+  content: '\f004';
+} /* '' */
+.icon_up_open:before {
+  content: '\f005';
+} /* '' */
+.icon_right_open:before {
+  content: '\f006';
+} /* '' */
+.icon_left_open:before {
+  content: '\f007';
+} /* '' */
+.icon_download:before {
+  content: '\f02e';
+} /* '' */
+.icon_facebook:before {
+  content: '\f09a';
+} /* '' */
+.icon_circle_empty:before {
+  content: '\f10c';
+} /* '' */
+.icon_quote_left:before {
+  content: '\f10d';
+} /* '' */
+.icon_youtube_play:before {
+  content: '\f16a';
+} /* '' */
+.icon_instagram:before {
+  content: '\f16d';
+} /* '' */
+.icon_share:before {
+  content: '\f1e0';
+} /* '' */

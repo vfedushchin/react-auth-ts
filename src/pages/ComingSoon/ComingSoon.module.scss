@@ -1,0 +1,24 @@
+@import 'src/static/assets/styles/resources';
+
+.coming_soon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: $light;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 30px;
+
+  @media (min-width: $sp_bp) {
+    margin: 50px 0 70px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    margin: 0 0 30px;
+  }
+}
