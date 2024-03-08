@@ -9,9 +9,16 @@ export enum ButtonType {
   Alternative = 'alternative',
 }
 
+export enum TypeBtn {
+  Button = 'button',
+  Submit = 'submit',
+  Reset = 'reset',
+}
+
 interface ButtonProps {
-  onClick: () => void
+  onClick?: () => void
   className?: string
+  typeBtn?: TypeBtn
   disabled?: boolean
   type?: ButtonType
 }
@@ -19,6 +26,7 @@ interface ButtonProps {
 export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
   children,
   className,
+  typeBtn,
   onClick,
   disabled,
   type,
@@ -34,6 +42,7 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
         className,
       ])}
       onClick={onClick}
+      type={typeBtn}
     >
       {children}
     </button>

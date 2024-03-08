@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput } from "../../components/TextInput/TextInput";
-import { Button } from "../../components/Button/Button";
+import { Button, TypeBtn } from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
 import styles from './Login.module.scss'
@@ -41,9 +41,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   };
 
 
-
   return (
-    <form onSubmit={handleSubmit} className={styles.login__form} id="loginForm" >
+    <form onSubmit={handleSubmit} className={styles.login__form} id="loginForm">
       <TextInput
         placeholder='Work email'
         value={email}
@@ -59,17 +58,18 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
           onChange={setPassword}/>
       }
 
-
-
-      <div className={styles.login__form_forgot} >
-        <button className={'btn-inline'} onClick={handleForgotPass}>Forgot your password?</button>
+      <div className={styles.login__form_forgot}>
+        <button type={'button'} className={'btn-inline'} onClick={handleForgotPass}>Forgot your password?</button>
       </div>
 
-      <Button className={styles.btn} disabled={!validateEmail(email) || password.length === 0} onClick={() => {
-      }}>Log in to Qencode</Button>
+      <Button typeBtn={TypeBtn.Submit}
+              className={styles.btn}
+              disabled={!validateEmail(email) || password.length === 0}>
+        Log in to Qencode
+      </Button>
 
 
-      <p>Is your company new to Qencode? <button className={'btn-inline'} onClick={handleSignup}>Sign up</button></p>
+      <p>Is your company new to Qencode? <button type={'button'} className={'btn-inline'} onClick={handleSignup}>Sign up</button></p>
     </form>
   );
 };

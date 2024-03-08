@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 import { Response } from '../../http/Response'
 import { config } from "../../config/Config";
 import LoginForm from './LoginForm';
-import { Button, ButtonType } from "../../components/Button/Button";
+import { Button, ButtonType, TypeBtn } from "../../components/Button/Button";
 import { handleError } from "../../api/AxiosService";
 
 import styles from './Login.module.scss'
@@ -36,13 +36,13 @@ const Login: React.FC = () => {
       <h1>Log in to your account</h1>
 
       <div className={styles.login__options}>
-        <Button type={ButtonType.Alternative} onClick={() => {
+        <Button typeBtn={TypeBtn.Button} type={ButtonType.Alternative} onClick={() => {
         }}>
           <img src="/images/icons/google.svg" alt=''/>
           <span>Google</span>
         </Button>
 
-        <Button type={ButtonType.Alternative} onClick={() => {
+        <Button typeBtn={TypeBtn.Button}  type={ButtonType.Alternative} onClick={() => {
         }}>
           <img src="/images/icons/github.svg" alt=''/>
           <span>Github</span>

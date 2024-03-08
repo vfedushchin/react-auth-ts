@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput } from "../../components/TextInput/TextInput";
-import { Button, ButtonType } from "../../components/Button/Button";
+import { Button, ButtonType, TypeBtn } from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
 import styles from './Forgot.module.scss'
@@ -41,12 +41,11 @@ const ForgotForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
         onChange={setEmail}/>
 
 
-      <Button className={styles.btn} disabled={!validateEmail(email)} onClick={() => {
-      }}>
+      <Button typeBtn={TypeBtn.Submit} className={styles.btn} disabled={!validateEmail(email)} >
         Send
       </Button>
 
-      <Button type={ButtonType.Alternative} onClick={() => navigate('/')}>
+      <Button typeBtn={TypeBtn.Button} type={ButtonType.Alternative} onClick={() => navigate('/')}>
         Cancel
       </Button>
     </form>
