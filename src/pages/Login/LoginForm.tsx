@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { TextInput } from "../../components/TextInput/TextInput";
 import { Button, TypeBtn } from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
+import {Context} from "../../App/App";
+import {observer} from "mobx-react-lite";
 
 import styles from './Login.module.scss'
 import { AppPath } from "../../AppPath";
@@ -12,6 +14,7 @@ interface LoginFormProps {
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
+  const {store} = useContext(Context);
   const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,7 +31,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setEmailError('');
-    onSubmit(email, password);
+    //onSubmit(email, password);
+    console.log( 888 );
+    store.login(email, password)
   };
 
   const checkEmailValidation = () => {
@@ -74,4 +79,4 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   );
 };
 
-export default LoginForm;
+export default observer(LoginForm);

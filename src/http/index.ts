@@ -10,10 +10,10 @@ const $api = axios.create({
     baseURL: API_URL
 })
 
-$api.interceptors.request.use((config) => {
+/*$api.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${localStorage.getItem(LocalStorageFields.AuthToken)}`
     return config;
-})
+})*/
 
 $api.interceptors.response.use((config) => {
     return config;
