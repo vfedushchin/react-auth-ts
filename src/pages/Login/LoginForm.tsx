@@ -9,11 +9,9 @@ import styles from './Login.module.scss'
 import { AppPath } from "../../AppPath";
 import { validateEmail } from "../../utils/Validations";
 
-interface LoginFormProps {
-  onSubmit: (email: string, password: string) => void;
-}
 
-const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
+
+const LoginForm: React.FC = () => {
   const {store} = useContext(Context);
   const navigate = useNavigate()
   const [email, setEmail] = useState('');
@@ -31,8 +29,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setEmailError('');
-    //onSubmit(email, password);
-    console.log( 888 );
     store.login(email, password)
   };
 

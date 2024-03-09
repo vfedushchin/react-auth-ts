@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { TextInput } from "../../components/TextInput/TextInput";
 import { Button } from "../../components/Button/Button";
 import { validatePassword } from "../../utils/Validations";
+import { Context } from "../../App/App";
+import { observer } from "mobx-react-lite";
+import { LocalStorageFields } from "../../LocalStorageFields";
 
-interface LoginFormProps {
-  onSubmit: (password: string, password_confirm: string) => void;
-}
 
-const ChangePasswordForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
+const ChangePasswordForm: React.FC = () => {
+  const { store } = useContext(Context);
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -16,7 +17,7 @@ const ChangePasswordForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setPasswordError('');
-    onSubmit(password, passwordConfirm);
+    store.changePassword(password, passwordConfirm, LocalStorageFields.AuthToken || '', '')
   };
 
   const checkPasswordValidation = (newValue: string) => {
@@ -70,10 +71,10 @@ const ChangePasswordForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
           handlePasswordConfirmChange(value);
         }}/>
 
-      <Button disabled={!validatePassword(password) || passwordConfirm !== password }   onClick={() => {
+      <Button disabled={!validatePassword(password) || passwordConfirm !== password} onClick={() => {
       }}>Reset Password</Button>
     </form>
   );
 };
 
-export default ChangePasswordForm;
+export default observer(ChangePasswordForm);

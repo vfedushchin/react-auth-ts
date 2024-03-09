@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { TextInput } from "../../components/TextInput/TextInput";
 import { Button, ButtonType, TypeBtn } from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
 import styles from './Forgot.module.scss'
 import { validateEmail } from "../../utils/Validations";
+import { Context } from "../../App/App";
+import { observer } from "mobx-react-lite";
+import { AppPath } from "../../AppPath";
 
-interface LoginFormProps {
-  onSubmit: (email: string) => void;
-}
 
-const ForgotForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
+const ForgotForm: React.FC = () => {
+  const { store } = useContext(Context);
   const navigate = useNavigate()
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -19,7 +20,8 @@ const ForgotForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
     e.preventDefault();
     checkEmailValidation()
     setEmailError('');
-    onSubmit(email);
+    store.forgotPassword(email, 'https://auth-qa.qencode.com/password-set').then(
+      () => navigate(`/${AppPath.ChangePassword}`))
   };
 
   const checkEmailValidation = () => {
@@ -41,7 +43,7 @@ const ForgotForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
         onChange={setEmail}/>
 
 
-      <Button typeBtn={TypeBtn.Submit} className={styles.btn} disabled={!validateEmail(email)} >
+      <Button typeBtn={TypeBtn.Submit} className={styles.btn} disabled={!validateEmail(email)}>
         Send
       </Button>
 
@@ -52,4 +54,4 @@ const ForgotForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   );
 };
 
-export default ForgotForm;
+export default observer(ForgotForm);

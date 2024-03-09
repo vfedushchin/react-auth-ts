@@ -8,5 +8,13 @@ export default class AuthService {
     }
 
 
+    static async forgotPassword(email: string, redirect_url: string): Promise<AxiosResponse<AuthResponse>> {
+        return $api.post<AuthResponse>('/password-reset', {email, redirect_url})
+    }
+
+    static async changePassword(password: string, password_confirm: string, token: string, secret: string): Promise<AxiosResponse<AuthResponse>> {
+        return $api.post<AuthResponse>('/password-set', {password, password_confirm, token, secret})
+    }
+
 }
 
